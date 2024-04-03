@@ -269,10 +269,6 @@ aside{
     margin-top: auto;
 }
 
-.reverse{
-    justify-content: flex-end;
-}
-
 .send-message{
     max-width: 70%;
     border-radius: 20px;
@@ -280,6 +276,7 @@ aside{
     padding: 10px;
     display: flex;
     background-color: rgb(222, 248, 193);
+    justify-content: flex-end;
 }
 
 /* BONUS */
@@ -334,6 +331,7 @@ aside{
     justify-content: space-around;
     background-color:rgba(243, 238, 236, 0.7);
     padding: 6px;
+    
     
     
 }
