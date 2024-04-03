@@ -242,7 +242,14 @@ aside{
 
 .message{
     padding-top: 15px;
-    position: relative;
+    display: flex;
+    justify-content: flex-start;
+}
+
+.message-reverse{
+    padding-top: 15px;
+    display: flex;
+    justify-content: flex-end;
 }
 
 .info-message i:hover .hidden-menu{
@@ -276,8 +283,12 @@ aside{
     padding: 10px;
     display: flex;
     background-color: rgb(222, 248, 193);
-    justify-content: flex-end;
+    
 }
+
+
+
+
 
 /* BONUS */
 

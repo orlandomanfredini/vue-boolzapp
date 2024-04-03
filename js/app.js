@@ -16,6 +16,7 @@ const { createApp } = Vue
   createApp({
     data() {
       return {
+        indexCurrent: 0,
         contacts: [
             {
             name: 'Michele',
@@ -180,6 +181,14 @@ const { createApp } = Vue
             }
         ]
       }
+      
     
-    }
+    },
+    methods:{
+         returnContact(i){
+            console.log('ciao' + i)
+            this.indexCurrent = i;
+
+         }
+    },
   }).mount('#app')

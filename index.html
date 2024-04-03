@@ -47,11 +47,11 @@
                         </div>
                     </div>
                     <ul class="list-chat">
-                        <li v-for="(contact, i) in contacts" class="box-chat">
+                        <li v-for="(contact, i) in contacts" @click="returnContact(i)" class="box-chat">
                             <div class="content-chat">
-                                <img :src="contacts[i].avatar" alt="avatar3">
+                                <img :src="contact.avatar" alt="avatar3">
                                 <span>
-                                    <strong>{{contacts[i].name}}</strong>
+                                    <strong>{{contact.name}}</strong>
                                     <div>Lorem ipsum dolor sit</div>
                                 </span>
                             </div>
@@ -148,9 +148,9 @@
                 <main> <!--chat-->
                     <div class="head-chat"> <!--header chat-->
                         <div class="info-chat">
-                            <img src="./img/avatar_1.jpg" alt="avatar 1">
+                            <img :src="contacts[indexCurrent].avatar" alt="avatar 1">
                             <span>
-                                <strong>Michele</strong>
+                                <strong>{{contacts[indexCurrent].name}}</strong>
                                 <div>Ulimo accesso alle 22.15</div>
                             </span>
                         </div>
@@ -163,9 +163,9 @@
                     </div>
                     <div class="conversation"> <!--conversation-->
                         <div class="container-sm">
-                            <div v-for="()" class="row message">
-                                <div class="recived-message">
-                                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aspernatur totam distinctio accusamus veniam pariatur placeat, omnis rerum nesciunt doloribus ex. Cumque veniam natus ratione nemo pariatur eaque, earum atque beatae.</p>
+                            <div v-for="text in contacts[indexCurrent].messages" :class="text.status === 'sent' ? 'message-reverse' : 'message'">
+                                <div  :class="text.status === 'sent' ? 'send-message' : 'recived-message' ">
+                                    <p>{{text.message}}</p>
                                     <div class="info-message"> <!--inizio menu a tendina-->
                                         <span>
                                             <i class="fa-solid fa-chevron-down"></i>
