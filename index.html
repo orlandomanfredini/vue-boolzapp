@@ -59,90 +59,7 @@
                                 16:23
                             </div>
                         </li>
-                        <!-- <li class="box-chat">
-                            <div class="content-chat">
-                                <img src="./img/avatar_4.jpg" alt="avatar3">
-                                <span>
-                                    <strong>Michele</strong>
-                                    <div>Lorem ipsum dolor sit</div>
-                                </span>
-                            </div>
-                            <div class="chat-hour">
-                                16:23
-                            </div>
-                        </li> -->
-                        <!-- <li class="box-chat">
-                            <div class="content-chat">
-                                <img src="./img/avatar_5.jpg" alt="avatar3">
-                                <span>
-                                    <strong>Michele</strong>
-                                    <div>Lorem ipsum dolor sit</div>
-                                </span>
-                            </div>
-                            <div class="chat-hour">
-                                16:23
-                            </div>
-                        </li>
-                        <li class="box-chat">
-                            <div class="content-chat">
-                                <img src="./img/avatar_6.jpg" alt="avatar3">
-                                <span>
-                                    <strong>Michele</strong>
-                                    <div>Lorem ipsum dolor sit</div>
-                                </span>
-                            </div>
-                            <div class="chat-hour">
-                                16:23
-                            </div>
-                        </li>
-                        <li class="box-chat">
-                            <div class="content-chat">
-                                <img src="./img/avatar_7.jpg" alt="avatar3">
-                                <span>
-                                    <strong>Michele</strong>
-                                    <div>Lorem ipsum dolor sit</div>
-                                </span>
-                            </div>
-                            <div class="chat-hour">
-                                16:23
-                            </div>
-                        </li>
-                        <li class="box-chat">
-                            <div class="content-chat">
-                                <img src="./img/avatar_8.jpg" alt="avatar3">
-                                <span>
-                                    <strong>Michele</strong>
-                                    <div>Lorem ipsum dolor sit</div>
-                                </span>
-                            </div>
-                            <div class="chat-hour">
-                                16:23
-                            </div>
-                        </li>
-                        <li class="box-chat">
-                            <div class="content-chat">
-                                <img src="./img/avatar_1.jpg" alt="avatar3">
-                                <span>
-                                    <strong>Michele</strong>
-                                    <div>Lorem ipsum dolor sit</div>
-                                </span>
-                            </div>
-                            <div class="chat-hour">
-                                16:23
-                            </div>
-                        </li>
-                        <li class="box-chat">
-                            <div class="content-chat">
-                                <img src="./img/avatar_2.jpg" alt="avatar3">
-                                <span>
-                                    <strong>Michele</strong>
-                                    <div>Lorem ipsum dolor sit </div>
-                                </span>
-                            </div>
-                            <div class="chat-hour">
-                                16:23
-                            </div>
-                        </li> -->
+                        
                     </ul>
                 </aside>
                 <main> <!--chat-->
@@ -162,7 +79,7 @@
                         
                     </div>
                     <div class="conversation"> <!--conversation-->
-                        <div class="container-sm">
+                        <div class="container-chat">
                             <div v-for="text in contacts[indexCurrent].messages" :class="text.status === 'sent' ? 'message-reverse' : 'message'">
                                 <div  :class="text.status === 'sent' ? 'send-message' : 'recived-message' ">
                                     <p>{{text.message}}</p>
@@ -176,162 +93,21 @@
                                                         <span>Condividi</span>
                                                     </div>
                                                     <div class="hiddden-row">
-                                                        <i class="fa-solid fa-arrow-down"></i>
-                                                        <span>Salva per te</span>
-                                                    </div>
-                                                    <div class="hiddden-row">
                                                         <i class="fa-solid fa-trash-can"></i>
                                                         <span>Elimina per tutti</span>
                                                     </div>
                                                 </div>
                                             </div>
                                         </span>
-                                        <div class="clock">{{text.date}}</div>
+                                        <div class="clock">{{text.date.slice(11, 16)}}</div>
                                     </div>
                                 </div>
                             </div>
-                            <!-- <div class="row message">
-                                <div class="send-message">
-                                    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dolor cumque pariatur expedita, nobis molestiae laborum, doloribus impedit numquam natus quam accusamus explicabo voluptate vero dolorum officiis ut harum excepturi necessitatibus!</p>
-                                    <div class="info-message">
-                                        <span>
-                                            <i class="fa-solid fa-chevron-down"></i>
-                                            <div class="hidden-menu d-none">
-                                                <div class="hidden-card">
-                                                    <div class="hiddden-row">
-                                                        <i class="fa-solid fa-circle-info"></i>
-                                                        <span>Condividi</span>
-                                                    </div>
-                                                    <div class="hiddden-row">
-                                                        <i class="fa-solid fa-arrow-down"></i>
-                                                        <span>Salva per te</span>
-                                                    </div>
-                                                    <div class="hiddden-row">
-                                                        <i class="fa-solid fa-trash-can"></i>
-                                                        <span>Elimina per tutti</span>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </span>
-                                        <div class="clock">16.23</div>
-                                    </div>
-                                </div>
-                            </div> -->
-                            <!-- <div class="row message">
-                                <div class="recived-message">
-                                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aspernatur totam distinctio accusamus veniam pariatur placeat, omnis rerum nesciunt doloribus ex. Cumque veniam natus ratione nemo pariatur eaque, earum atque beatae.</p>
-                                    <div class="info-message">
-                                        <span>
-                                            <i class="fa-solid fa-chevron-down"></i>
-                                            <div class="hidden-menu d-none">
-                                                <div class="hidden-card">
-                                                    <div class="hiddden-row">
-                                                        <i class="fa-solid fa-circle-info"></i>
-                                                        <span>Condividi</span>
-                                                    </div>
-                                                    <div class="hiddden-row">
-                                                        <i class="fa-solid fa-arrow-down"></i>
-                                                        <span>Salva per te</span>
-                                                    </div>
-                                                    <div class="hiddden-row">
-                                                        <i class="fa-solid fa-trash-can"></i>
-                                                        <span>Elimina per tutti</span>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </span>
-                                        <div class="clock">16.23</div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="row message reverse">
-                                <div class="send-message">
-                                    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dolor cumque pariatur expedita, nobis molestiae laborum, doloribus impedit numquam natus quam accusamus explicabo voluptate vero dolorum officiis ut harum excepturi necessitatibus!</p>
-                                    <div class="info-message">
-                                        <span>
-                                            <i class="fa-solid fa-chevron-down"></i>
-                                            <div class="hidden-menu d-none">
-                                                <div class="hidden-card">
-                                                    <div class="hiddden-row">
-                                                        <i class="fa-solid fa-circle-info"></i>
-                                                        <span>Condividi</span>
-                                                    </div>
-                                                    <div class="hiddden-row">
-                                                        <i class="fa-solid fa-arrow-down"></i>
-                                                        <span>Salva per te</span>
-                                                    </div>
-                                                    <div class="hiddden-row">
-                                                        <i class="fa-solid fa-trash-can"></i>
-                                                        <span>Elimina per tutti</span>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </span>
-                                        <div class="clock">16.23</div>
-                                    </div>
-                                    
-                                    
-                                </div>
-                            </div>
-                            <div class="row message">
-                                <div class="recived-message">
-                                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aspernatur totam distinctio accusamus veniam pariatur placeat, omnis rerum nesciunt doloribus ex. Cumque veniam natus ratione nemo pariatur eaque, earum atque beatae.</p>
-                                    <div class="info-message">
-                                        <span>
-                                            <i class="fa-solid fa-chevron-down"></i>
-                                            <div class="hidden-menu d-none">
-                                                <div class="hidden-card">
-                                                    <div class="hiddden-row">
-                                                        <i class="fa-solid fa-circle-info"></i>
-                                                        <span>Condividi</span>
-                                                    </div>
-                                                    <div class="hiddden-row">
-                                                        <i class="fa-solid fa-arrow-down"></i>
-                                                        <span>Salva per te</span>
-                                                    </div>
-                                                    <div class="hiddden-row">
-                                                        <i class="fa-solid fa-trash-can"></i>
-                                                        <span>Elimina per tutti</span>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </span>
-                                        <div class="clock">16.23</div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="row message reverse">
-                                <div class="send-message">
-                                    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dolor cumque pariatur expedita, nobis molestiae laborum, doloribus impedit numquam natus quam accusamus explicabo voluptate vero dolorum officiis ut harum excepturi necessitatibus!</p>
-                                    <div class="info-message">
-                                        <span>
-                                            <i class="fa-solid fa-chevron-down"></i>
-                                            <div class="hidden-menu d-none">
-                                                <div class="hidden-card">
-                                                    <div class="hiddden-row">
-                                                        <i class="fa-solid fa-circle-info"></i>
-                                                        <span>Condividi</span>
-                                                    </div>
-                                                    <div class="hiddden-row">
-                                                        <i class="fa-solid fa-arrow-down"></i>
-                                                        <span>Salva per te</span>
-                                                    </div>
-                                                    <div class="hidden-row">
-                                                        <i class="fa-solid fa-trash-can"></i>
-                                                        <span>Elimina per tutti</span>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </span>
-                                        <div class="clock">16.23</div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div> -->
-                    </div> 
+                        </div> 
+                    </div>
                     <div class="text-area"> <!--chatbar whit emoticon-->
                         <i class="fa-solid fa-face-smile"></i>
-                        <input type="text" name="" id="" placeholder="Scrivi un messaggio...">
+                        <input v-model="userText" @keydown.enter="returnMessage(indexCurrent)" type="text" name="" id="" placeholder="Scrivi un messaggio...">
                         <i class="fa-solid fa-microphone"></i>
                     </div>
                 </main>

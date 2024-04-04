@@ -55,7 +55,8 @@ main{
     background-position: center;
     display: flex;
     flex-direction: column;
-    overflow: auto;
+    
+    
 
 }
 
@@ -230,17 +231,17 @@ aside{
 }
 
 .conversation{
-    
     height: calc(100% - 110px);
     overflow: auto;
 }
 
-.container-sm{
-    max-width: 80%;
+.container-chat{
+    padding: 0 20px;
     margin: 0 auto;
 }
 
 .message{
+    position: relative;
     padding-top: 15px;
     display: flex;
     justify-content: flex-start;
@@ -263,12 +264,13 @@ aside{
     border-radius: 20px;
     padding: 10px;
     display: flex;
+    gap: 5px;
 }
 
 .info-message{
     display: flex;
     flex-direction: column;
-    align-items: flex-end;
+    align-items: center;
 }
 
 
@@ -278,14 +280,19 @@ aside{
 }
 
 .send-message{
+    
     max-width: 70%;
     border-radius: 20px;
     color: black;
     padding: 10px;
     display: flex;
+    flex-direction: row-reverse;
+    gap: 5px;
     background-color: rgb(222, 248, 193);
     
 }
+
+
 
 
 
@@ -301,8 +308,7 @@ aside{
     flex-direction: column;
     align-items: center;
     position: absolute;
-    top: 32px;
-    right: 40px;
+    
 }
 
 .d-none{
@@ -311,6 +317,9 @@ aside{
 
 .hidden-card{
     padding: 7px;
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
 }
 
 .hidden-row i{
@@ -321,8 +330,9 @@ aside{
 .reverse .info-message span .hidden-menu{
     background-color:rgba(222, 248, 193, 0.7) ;
     transform: translateX(149px);
-
 }
+
+
 
 
 
@@ -346,6 +356,7 @@ aside{
     
     
     
+    
 }
 
 .text-area i{
@@ -355,6 +366,8 @@ aside{
 
 .text-area input{
     width: 90%;
+    outline: none;
+    
     background-color: white;
     border: none;
     border-radius: 5px;
