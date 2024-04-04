@@ -43,11 +43,11 @@
                             <button>
                                 <i class="fa-solid fa-magnifying-glass"></i>
                             </button>
-                            <input type="text" name="" id="" placeholder="Cerca o inizia una nuova chat...">
+                            <input v-model="searchContactText" @keyup.enter="filtredContact()" type="text" name="" id="" placeholder="Cerca o inizia una nuova chat...">
                         </div>
                     </div>
                     <ul class="list-chat">
-                        <li v-for="(contact, i) in contacts" @click="returnContact(i)" class="box-chat">
+                        <li v-for="(contact, i) in newArrayContacts" @click="returnContact(i)" class="box-chat">
                             <div class="content-chat">
                                 <img :src="contact.avatar" alt="avatar3">
                                 <span>

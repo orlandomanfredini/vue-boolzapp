@@ -18,11 +18,19 @@
 // ● Risposta dall’interlocutore: ad ogni inserimento di un messaggio, l’utente riceverà
 // un “ok” come risposta, che apparirà dopo 1 secondo
 
+
+// Milestone 4
+// ● Ricerca utenti: scrivendo qualcosa nell’input a sinistra, vengono visualizzati solo i
+// contatti il cui nome contiene le lettere inserite (es, Marco, Matteo Martina -> Scrivo
+// “mar” rimangono solo Marco e Martina)
+
 const { createApp } = Vue
 
   createApp({
     data() {
       return {
+        newArrayContacts: [],
+        searchContactText: '',
         userText: '',
         indexCurrent: 0,
         contacts: [
@@ -187,7 +195,8 @@ const { createApp } = Vue
             }
             ],
             }
-        ]
+        ],
+        
       }
       
     
@@ -203,10 +212,34 @@ const { createApp } = Vue
                 date: '12/02/2024 16:30:12',
                 message: this.userText,
                 status: 'sent'
-            }
-            this.contacts[i].messages.push(newMessage)
-            this.userText = ''
+            };
+            this.contacts[i].messages.push(newMessage);
+            this.userText = '';
             
-         }
+            setTimeout(() => {
+                const newMessage = {
+                    date: '12/02/2024 16:30:12',
+                    message: 'RISPOSTA AUTOMATICA',
+                    status: 'received'
+                };
+                this.contacts[i].messages.push(newMessage);
+            }, 2 * 1000);
+
+         },
+
+         filtredContact(){
+            const newContactsFilter = [];
+            for(let i = 0; i < this.contacts.length; i++){
+                const currentName = this.contacts[i].name.toLowerCase();
+                if(currentName.includes(this.searchContactText.toLowerCase())){
+                    newContactsFilter.push(this.contacts[i]);
+                }
+            }
+            return this.newArrayContacts = newContactsFilter
+        },
     },
+    mounted(){
+         this.newArrayContacts = this.contacts
+    }
+    
   }).mount('#app')

@@ -160,6 +160,10 @@ aside{
     
 }
 
+.search-contact input{
+    outline: none;
+}
+
 .search-contact i{
     background-color: white;
     padding: 5px;
